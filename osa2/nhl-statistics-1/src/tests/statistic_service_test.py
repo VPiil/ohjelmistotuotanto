@@ -20,6 +20,7 @@ class TestStatisticsService(unittest.TestCase):
         self.stats = StatisticsService(
             PlayerReaderStub()
         )
+        self.assertEqual(self.search("Gretzky").name, "Gretzky")
 
     def test_players(self):
         players = self.stats.top(4)
